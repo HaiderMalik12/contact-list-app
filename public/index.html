@@ -16,13 +16,21 @@
                     <th>Number</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr ng-repeat="contact in contactList">
+                    <td>{{contact.name}} </td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.number}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <!-- Javascript goes here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="controllers/controller.js"> </script>
+    <script src="controllers/controller.js">
+    </script>
 </body>
 
 </html>
