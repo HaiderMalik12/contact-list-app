@@ -1,24 +1,14 @@
 var app = angular.module('contactApp', []);
-var person = {
-    name: 'Haider',
-    email: 'haidermalik504@gmail.com',
-    number: '(112)111-111'
-};
 
-var person2 = {
-    name: 'Faham',
-    email: 'faham@gmail.com',
-    number: '(333)333-333'
-};
-var person3 = {
-    name: 'Mohsin',
-    email: 'Mohsin@gmail.com',
-    number: '3043-2222-211'
-}
+debugger;
+app.controller('AppCtrl', function($scope, $http) {
 
-var contactList = [person, person2, person3];
+    // send request to the server for data
+    $http.get('/contactList').success(function(response) {
+        console.log('I got The data I requested');
+        // view display the data
+        $scope.contactList = response;
+    });
 
-app.controller('AppCtrl', function($scope) {
 
-    $scope.contactList = contactList;
 });
