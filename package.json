@@ -10,6 +10,8 @@
   "author": "Haider Malik",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongodb": "^2.1.13",
+    "mongojs": "^2.3.0"
   }
 }
